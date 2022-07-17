@@ -6,12 +6,15 @@ export type UserDocument = User & Document;
 @Schema()
 export class User {
   @Prop()
+  userId: string;
+
+  @Prop()
   name: string;
 
-  @Prop()
+  @Prop({ required: true })
   password: string;
 
-  @Prop()
+  @Prop({ required: true })
   email: string;
 }
 
